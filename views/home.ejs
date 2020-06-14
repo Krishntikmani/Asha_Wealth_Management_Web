@@ -106,14 +106,14 @@
 			<marquee class='BSE'>
 
 			<%for(var i=0;i<data.item.length;i++) { %>
-				<% if(data.item[i].direction==='1'){%>	
+				<% if(data.item[i].direction==='-1'){%>	
 
-				<span style='color:red'> <%= data.item[i].shortname%> : <%= data.item[i].lastvalue %>                       <i class="fas fa-arrow-down"></i> &nbsp;
+				<span style='color:red'> <%= data.item[i].shortname%> : <%= data.item[i].lastvalue %>                    (<%=data1.item[i].precentchange%>%)   <i class="fas fa-arrow-down"></i> &nbsp;
 				</span>			 
 
 					<%}%>
-				<%if(data.item[i].direction==='-1') { %>
-					<span style='color:blue'>  <%= data.item[i].shortname %> : <%= data.item[i].lastvalue %> <i class="fas fa-arrow-up"></i>    </span> &nbsp;
+				<%if(data.item[i].direction==='1') { %>
+					<span style='color:blue'>  <%= data.item[i].shortname %> : <%= data.item[i].lastvalue %>                 (<%=data1.item[i].precentchange%>%)<i class="fas fa-arrow-up"></i>    </span> &nbsp;
 				<% } %>
 			<% } %>
 			</marquee>
@@ -130,13 +130,14 @@
 			<marquee class='BSE'>
 
 			<%for(var i=0;i<data1.item.length;i++) { %>
-				<% if(data1.item[i].direction==='1'){%>	
+				<% if(data1.item[i].direction==='-1'){%>	
 
-				<span style='color:red'> <%= data1.item[i].shortname%> : <%= data1.item[i].lastvalue %><i class="fas fa-arrow-down"></i>  </span> &nbsp;			 
+				<span style='color:red'> <%= data1.item[i].shortname%> : <%= data1.item[i].lastvalue %>
+					(<%=data1.item[i].precentchange%>%)<i class="fas fa-arrow-down"></i>  </span> &nbsp;			 
 
 					<%}%>
-				<%if(data1.item[i].direction==='-1') { %>
-					<span style='color:blue'> <%= data1.item[i].shortname%> : <%= data1.item[i].lastvalue %><i class="fas fa-arrow-up"></i>  </span> &nbsp;
+				<%if(data1.item[i].direction==='1') { %>
+					<span style='color:blue'> <%= data1.item[i].shortname%> : <%= data1.item[i].lastvalue %>(<%=data1.item[i].precentchange%>%)<i class="fas fa-arrow-up"></i>  </span> &nbsp;
 				<% } %>
 			<% } %>
 			</marquee>
