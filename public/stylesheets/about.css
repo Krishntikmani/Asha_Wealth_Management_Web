@@ -1,0 +1,17 @@
+.container{
+	border: 2px solid black;
+	margin-top: 140px;
+	margin-bottom: 20px;
+}
+.container h1{
+	text-align:center;
+}
+
+.container .well .row p{
+	text-align: justify;
+	font-size: 1.2em;
+	font-family: Lato;
+}
+.container .well .row h3{
+	color:#88c6fc;
+}

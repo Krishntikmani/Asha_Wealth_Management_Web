@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+
+
+<div class='container'>
+	<div class='bse'>
+	<h2>
+	Exchange Name : <%= data.indices.exchange %>
+	
+</h2>
+	
+		
+		<p>
+			<strong>Price: <%= data.indices.lastprice %></strong>
+		</p>
+		<p>
+			<strong>Change: <%= data.indices.change %></strong>
+		</p>
+		<p>
+			<strong>Percentage Change: <%= data.indices.percentchange %></strong>
+		</p>
+		<p>
+			<strong>Price: <%= data.indices.open %></strong>
+		</p>
+		<p>
+			<strong>High: <%= data.indices.high %></strong>
+		</p>
+		<p>
+			<strong>Low: <%= data.indices.low %></strong>
+		</p>
+		<span class='arrow'><i class="fas fa-arrow-circle-up"></i></span>
+		
+</div>
+</div>
+
+
+
+<%- include('partials/footer') %>

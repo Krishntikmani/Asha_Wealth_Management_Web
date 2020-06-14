@@ -1,0 +1,533 @@
+<%- include('partials/header') %>
+
+<!-- The sliding thing -->
+<div class='container-fluid'>
+	
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="3"></li>  
+	  <li data-target="#carousel-example-generic" data-slide-to="4"></li> 
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+	  
+	     <div class="item active">
+      <img class='c-img grad' src="/images/index2.jpg" alt="...">
+		 <div class="top-left">
+			  <h2>Mutual Funds Sahi Hai</h2>
+			    <h3>
+					start taking advice from experts...
+			   </h3>
+		  </div>
+      <div class="carousel-caption">
+        
+			<a class='btn btn-success btn-lg' href='https://www.bsestarmf.in'>Start Investing</a>
+		  
+      </div>
+    </div>
+	  
+	  <div class="item">
+      <img class='c-img grad' src="/images/index1.jpg" alt="...">
+		<div class="bs-slider-overlay"></div>  
+       <div class="carousel-caption">
+        	<a class='btn btn-lg btn-danger' href='/market-feed'>Market Feed</a>
+      </div>
+    </div> 
+	  
+ 
+   
+	 
+	  <div class='item'>
+		  <img class='c-img grad' src='/images/index3.jpg'>
+		   
+		  <div class='carousel-caption'>
+			<a class='btn btn-lg btn-warning' href="https://portal.bseebix.com"> Get Started!</a>  
+		  </div>
+		  
+	  </div>
+	  
+	  <div class='item'>
+		  <img class='c-img grad' src='/images/index4.png'>
+		  <div class="top-left1">
+			  <h2>Consultancy Services</h2>
+			    <h3>
+					since 1990s...
+			   </h3>
+		  </div>
+		  <div class='carousel-caption'>
+			  <a class='btn btn-primary btn-lg' href='#contact'>Contact Us</a>
+		  </div>
+		  
+	  </div>
+	  
+	  <div class='item'>
+		  <img class='c-img' src='/images/kaymall-flight-dekstop.jpg'>
+		  <div class="top-left">
+			  <h2>Book Flight Tickets</h2>
+			    <h3>
+					with us at cheap prices...
+			   </h3>
+		  </div>
+		  <div class='carousel-caption'>
+			<a class='btn btn-warning btn-lg' href='https://www.seeingo.in'>Book Tickets</a>
+	  </div>	
+	  </div>
+    	
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</div>
+
+<!-- ====================== -->
+<!-- Price Ticker -->
+<!-- ====================== -->
+<div id='price-ticker'>
+		<div class='container'>
+		<div class='row'>
+		<div class='col-sm-1' style='background-color:#c2e3ff;text-align:center;'>
+			<span>BSE:</span>
+		</div>
+		<div class='col-sm-11'>
+			<marquee class='BSE'>
+
+			<%for(var i=0;i<data.item.length;i++) { %>
+				<% if(data.item[i].direction==='1'){%>	
+
+				<span style='color:red'> <%= data.item[i].shortname%> : <%= data.item[i].lastvalue %>                       <i class="fas fa-arrow-down"></i> &nbsp;
+				</span>			 
+
+					<%}%>
+				<%if(data.item[i].direction==='-1') { %>
+					<span style='color:blue'>  <%= data.item[i].shortname %> : <%= data.item[i].lastvalue %> <i class="fas fa-arrow-up"></i>    </span> &nbsp;
+				<% } %>
+			<% } %>
+			</marquee>
+		</div>
+		</div>
+	</div>
+
+	<div class='container'>
+		<div class='row'>
+		<div class='col-sm-1' style='background-color:#c2e3ff;text-align:center;'>
+			<span>NSE:</span>
+		</div>
+		<div class='col-sm-11'>
+			<marquee class='BSE'>
+
+			<%for(var i=0;i<data1.item.length;i++) { %>
+				<% if(data1.item[i].direction==='1'){%>	
+
+				<span style='color:red'> <%= data1.item[i].shortname%> : <%= data1.item[i].lastvalue %><i class="fas fa-arrow-down"></i>  </span> &nbsp;			 
+
+					<%}%>
+				<%if(data1.item[i].direction==='-1') { %>
+					<span style='color:blue'> <%= data1.item[i].shortname%> : <%= data1.item[i].lastvalue %><i class="fas fa-arrow-up"></i>  </span> &nbsp;
+				<% } %>
+			<% } %>
+			</marquee>
+		</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<!-- ============================== -->
+	<!-- Mutual fund portion -->
+<!-- ============================ -->
+
+<div id='mf' class='row'>
+	<div class='jumbotron'>
+			<div class='container'>
+
+				<div class='row'>
+					<div class='col-sm-6'>
+						<h2>
+							Mutual Funds
+						</h2>
+						<p class='ins-mat'>
+							<strong>Everyone has different financial goals like living in a dream home, having a big car, a financially protected retirement or to secure their children future etc based on their financial needs. Whatever your goals might be, mutual funds can help to meet them.</strong>
+
+						</p>
+						<p class='ins-mat'> 
+							<strong>AWM focus on goal based investment planning taking into consideration the investor's time horizon and risk appetite.</strong>
+						</p>
+
+						<p>
+							<a class='btn btn-primary btn-lg' href='https://www.bsestarmf.in'>Get Started</a>
+						</p>
+
+					</div>
+
+					<div class='col-sm-6'>
+						<img src='/images/mf1.png'>
+					</div>
+
+
+				</div>	
+		
+	</div>
+		
+	<div class='flex-container'>
+		<marquee behavior='alternate'>
+			<img class='brand' src='https://seekvectorlogo.com/wp-content/uploads/2019/02/hdfc-mutual-fund-vector-logo.png'>
+			<img class='brand' src='https://static.paytmmoney.com/amc-logo/DSPBR.png'>
+			<img class='brand' src='https://img.dtnext.in/Images/Article/201710272032263929_MFs-growing-at-rate-of-15-per-cent-Kotak-Mutual-Fund_SECVPF.gif'>
+			<img class='brand' src='https://ibsintelligence.com/wp-content/uploads/2019/12/Nippon-India-MF.png'>
+			<img class='brand' src='https://knnindia.co.in/uploads/newsfiles/SBI-mutual-fund-03-02-2020.jpg'>
+			<img class='brand' src='https://d2b0ersbqt56nw.cloudfront.net/wp-content/uploads/2018/06/mirae.png'>
+			<img class='brand' src='https://trendpickle.com/wp-content/uploads/2019/09/ICICI.jpg'>
+			<img class='brand'src='https://pbs.twimg.com/profile_images/975698333778915334/rllQExfR_400x400.jpg'>
+			<img class='brand'src='https://pbs.twimg.com/profile_images/834042352259964928/NOGCoFqC_400x400.jpg'>
+			<img class='brand' src='https://mutualfund.adityabirlacapital.com/-/media/bsl/images/logo/birla_600x315.jpg'>
+		</marquee>	
+	</div>	
+		
+   
+		
+			
+	<div class='container'>
+		<div class='row'>
+			<div class='col-xs-12'>
+				<div class='sip-cal-head'>
+				<h2>
+					S.I.P. Your smart way to create wealth systematically
+				</h2>
+			</div>
+			</div>
+			
+		</div>
+		
+		<div class='row'>
+			<div class='fill-values'>
+			<div class='col-md-3'>	
+			<div class='thumbnail'>
+				<p>
+					Monthly Investment
+				</p>
+				<input type='number' name='investment' value='500' min='500' step='500'>
+			</div>
+			</div>
+			<div class='col-md-3'>
+				<div class='thumbnail'>
+				<p>
+					Investment Period
+				</p>
+				<input type='number' name='period' value='20'>
+				</div>
+			</div>
+			<div class='col-md-3'>
+				<div class='thumbnail'>
+				 <p>
+					 Expected Return
+				</p>
+				<input type='number' name='return' value='10'> %
+				</div>
+			</div>
+			<div class='col-md-3'>
+				<div class='thumbnail'>
+				<p>
+					Total Investment
+				</p>
+				 Rs <span class='net-invest'>0</span>
+				</div>
+			</div>
+		</div>	
+			
+		</div>
+		
+		<div class='row'>
+			<div class='col-md-12'>
+				<div id="tester" style="width:100%;display:none;margin-top:30px"></div>
+				<div class='ret'>
+					<h4>
+						<p>
+							Expected Return: Rs <span class='exp-ret'></span>
+						</p> 
+					</h4>
+				</div>
+			</div>
+			
+		</div>
+		<div class='row'>
+			Disclaimer :This calculator is meant for illustrative purposes only. It demonstrates the power of inculcating a regular savings habit for the long term. There is no assurance or guarantee that the future values demonstrated herein would be achieved.Please read the Statement of Additional Information / Scheme Information Document carefully before investing.
+		</div>
+		<hr>
+	</div>	
+	
+	</div>
+	
+	
+	
+</div>
+	
+	
+	
+	
+
+
+<div class='container'>
+	<div id='insurance'>
+	
+	
+	<div class='container'>
+		<div class='row'>
+			<div class='col-sm-6'>
+				<h2>
+					Insurances
+				</h2>
+				<p class='ins-mat'>
+					<strong>Insurance is a form of hedging. It covers the financial loss for you, your dependents or your assets against an unforeseen event. It’s a method of ensuring that in case an unexpected unfortunate event takes place, the present and future financial wellbeing or financial support received from the insured is not compromised.</strong></p>
+				<p class='ins-mat'> <strong>There is a legal contract between the insurer (company) and the insured (individual), known as the insurance policy which entails the terms and conditions on the happening of which the insurer would have to indemnify the insured or his nominees..</strong>
+				</p>
+				<p>
+					<a class='btn btn-lg btn-primary' href='/insurance'>Read More..</a>
+				</p>
+		
+			</div>
+			
+			<div class='col-sm-6 ins-img'>
+				<img src='/images/ins1.png'>
+			</div>
+			
+			
+		</div>	
+		
+	</div>
+	
+	
+	
+	
+
+	
+	
+</div>
+</div>
+
+
+
+<hr>
+<div id = 'client-testimonial'>
+	<div class='container'>
+		<div class='row'>
+			<h1 style='text-align:center'>
+				Client Testimonial
+			</h1>
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			  </ol>
+			
+			  <!-- Wrapper for slides -->
+  			<div class="carousel-inner" role="listbox">
+				<div class='item active'>
+					<blockquote>
+                    	<div class="row">
+                                
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="coverpart">
+                                	<div class="col-sm-12 ltspac">
+                                  	<p>Hi Amit.. I appreciate your efforts and dedication towards work and thanx for generating good return for me. God bless you!! <br><br></p>
+                                	</div>
+                                	<div class="col-sm-12 text-center">
+                                    	<div class="row">
+                                        	<div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<small>Mr. Kunal Anand</small>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<img class="img-circle" src="/images/test1.jpeg" style="width: 81px;height:81px;">
+                                            </div>
+                                        </div>
+                                      
+                                   	</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                                	<div class="coverpart">
+                                	<div class="col-sm-12 ltspac">
+                                  <p>I would like to thank Amit bhaiya, who always looks after my portfolio for better returns, his service is unparallel. <br><br></p>
+                                </div>
+                                    <div class="col-sm-12 text-center">
+                                    	<div class="row">
+                                        	<div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<small>Mr. Shubham Motani</small>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<img class="img-circle" src="/images/test2.jpeg" style="width: 81px;height:81px;">
+                                            </div>
+                                        </div>
+                                      
+                                      
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                                
+                              </div>
+                    </blockquote>
+				</div>
+				<div class='item'>
+					<blockquote>
+                    	<div class="row">
+                                
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="coverpart">
+                                	<div class="col-sm-12 ltspac">
+                                  	<p>Amit is my younger brother and I always trust him, after my marraige my husband started investment with Amit's advice and now i am able to get positive returns. Love you bhai...<br><br> </p>
+                                	</div>
+                                	<div class="col-sm-12 text-center">
+                                    	<div class="row">
+                                        	<div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<small>Mrs. Abha Garodia</small>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<img class="img-circle" src="/images/test3.jpeg" style="width: 81px;height:81px;">
+                                            </div>
+                                        </div>
+                                      
+                                   	</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                                	<div class="coverpart">
+                                	<div class="col-sm-12 ltspac">
+                                  <p>Jai Shri Krishna Tikmani Ji, I worked with Mr. Awadh Bihari Tikmani since his sons were too young and now as they are grown up their advice are turning golden for me.<br><br> </p>
+                                </div>
+                                    <div class="col-sm-12 text-center">
+                                    	<div class="row">
+                                        	<div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<small>Mr. R.C. Shah</small>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12 ltspac">
+                                            	<img class="img-circle" src="/images/test4.jpeg" style="width: 81px;height:81px;">
+                                            </div>
+                                        </div>
+                                      
+                                      
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                                
+                              </div>
+                    </blockquote>
+				</div>
+			</div>	
+		</div>	
+		</div>
+		
+	</div>
+	
+</div>
+
+
+
+<div id='contact'>
+	<hr>
+	<div class='jumbotron'>
+	<div class='container'>
+		
+		<div class='row'>
+			<div class='col-sm-6 well' style="color:white; background:#74808a">
+				<h3>
+					Contact Us
+				</h3>
+				<h2>
+					Asha Wealth Management
+					
+				</h2>
+				<p>
+					Brahman Toli,<br>
+					Near Durga Asthan,<br>
+					Muzaffarpur Bihar 842001
+				</p>
+				<p>
+					Phone - +91 8235415800<br>
+					Email - amit.tikmani@gmail.com
+				</p>
+		
+			</div>
+			
+			<div class='col-sm-6'>
+				<h4>
+					For any further query please fill the form below :-
+				</h4>
+				<form action='/' method='POST'>
+					<div class=form-group>
+						<input class='form-control' type='text' name='name' placeholder='Name'>
+					</div>
+					<div class=form-group>
+						<input class='form-control' type='email' name='email' placeholder='E-mail'>
+					</div>
+					<div class=form-group>
+						<input class='form-control' type='number' name='mob' placeholder='Mobile No.'>
+					</div>
+					<div class=form-group>
+						<input class='form-control' type='number' name='wp' placeholder='Whatsapp No.'>
+					</div>
+					<div class=form-group>
+						<input class='form-control' type='text' name='query' placeholder='Enter your query here...'>
+					</div>
+					
+					<button class='btn btn-md btn-primary'>
+						Submit
+					</button>
+					
+					
+					
+				</form>
+			</div>
+			
+			
+		</div>	
+		
+	</div>
+	
+	
+	
+	
+</div>
+	
+
+	<div class='container'>
+		<div class='row'>
+	<div class='col-sm-12'>
+		
+		
+		<h3 style='color:red'>
+			Attention Investors:	
+		</h3>
+			<h4>
+				<marquee>KYC is one time excercise while dealing in securities market - once KYC is done through a SEBI registered intermediatary (BROKER/DP/MUTUAL FUND) | PLease update your mobile number to get sms alert. | Mutual Funds are subject to market risk. Please read all scheme related documents carefully before investing</marquee>
+		</h4>
+		
+	</div>
+	</div>
+</div>
+	
+</div>
+
+
+
+
+<%- include('partials/footer') %>

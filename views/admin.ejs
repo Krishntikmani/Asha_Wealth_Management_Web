@@ -1,0 +1,23 @@
+<h1>
+	 Hi Amit Tikmani
+</h1>
+<a href='/admin-control/blog-new'>Write Blog</a>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>E-mail</th>
+		<th>Mobile No.</th>
+		<th>Whatsapp No.</th>
+		<th>Query</th>
+	</tr>
+	<% for(var i=0;i<query.length;i++){ %>
+		<tr>
+			<td><%= query[i].name%></td>
+			<td><%= query[i].email%></td>
+			<td><%= query[i].mobile_no%></td>
+			<td><%= query[i].whatsapp%></td>
+			<td><%= query[i].qry%></td>
+		</tr>
+	<% } %>
+	
+</table>

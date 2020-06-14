@@ -1,0 +1,285 @@
+.navbar .navbar-header #logo{
+	font-family: 'Lato';
+	font-size: 40px;
+	color: darkgray;
+	padding-left: 30px;
+	text-transform: capitalize;
+	
+}
+
+#navigation .navbar-default{
+	
+	background: white;
+}
+
+.navbar .navbar-header #logo #cap{
+	color: black;
+	font-family: Lato;
+	padding-left: 10px;
+	font-size: 15px;
+	min-height: 50px;
+}
+#navigation .navbar{
+	min-height: 80px;
+}
+
+
+.navbar-defaults{
+	background-color: white;
+	border-color: transparent;
+	
+}
+.bs-slider-overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	
+}
+.carousel-inner .item .c-img{
+	width: 100%;
+	height: 600px;
+	
+	
+} 
+.carousel-inner .item .grad {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(220, 66, 37, 0.5)), color-stop(100%,rgba(0,47,75,0.5)));
+
+}
+.carousel-inner .item .carousel-caption{
+	left: 20%;
+	bottom: 20px;
+	font-family: 'Roboto Mono';
+	font-size: 80px;
+	
+	z-index: 0;
+	
+}
+.carousel-inner .item .bs-slider{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.top-left{
+  position: absolute;
+  top: 20%;
+  left: 15%;
+
+  font-family: Lato;	
+  z-index: 2;		
+}
+.top-left1{
+	position: absolute;
+   top: 20%;
+   left: 5%;
+ color:#f5b505;
+  font-family: Lato;	
+  z-index: 2;	
+}
+.top-left1 h2{
+	font-size: 50px;
+}
+.top-left1 h3{
+	font-size: 30px;
+	
+}
+.top-left h2{
+	font-size: 50px;
+}
+.top-left h3{
+	font-size: 30px;
+	margin-left: 70px;
+}
+
+.container .BSE{
+	display:inline-axis;
+	
+} 
+.fix{
+	position:fixed;
+    bottom:0px;
+    left:90%;
+	height: 80px;
+	width: 80px;
+	background: transparent;
+	z-index: 10;
+}
+.fix h3{
+	position:fixed;
+    bottom:70px;
+    left:90%;
+	
+	background: transparent;
+	z-index: 10;
+}
+
+#price-ticker{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#mf {
+	background-color: white;
+	background-size: contain;
+	position: relative;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 0px;
+	display: inline-block;
+	margin-bottom: 80px;
+	
+		
+}
+#mf .jumbotron{
+	background-color: transparent;
+}
+#mf .jumbotron .col-sm-6 h2{
+	color: #8f1207;
+}
+#mf .container .sip-cal-head {
+	background: #2171b8;
+	color: white;
+	margin-top:5px;
+	padding-top:1px;
+	padding-bottom:1px;
+	text-align: center;
+	font-weight: 400;
+	position: relative;
+	font-family: Lato;
+}
+#mf .container .fill-values .thumbnail{
+	border: 2px solid black;
+	margin-top: 4%;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+
+	
+}
+#mf .container .fill-values .thumbnail p{
+	background: #2171b8;
+	color: white;
+	border-bottom: 1px solid black;
+}
+#mf .container .fill-values .thumbnail input{
+	text-align:center;
+}
+#mf .flex-container{
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	margin-top: 25px;
+	padding-top:3px;
+	padding-bottom:3px;
+	
+}
+#mf .brand{
+	height: 100px;
+	width: 150px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+#mf .flex-container img:hover{
+	transform: scale(1.5);
+}
+#mf .ret h4 p{
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+	width: 40%;
+	margin: 5px;	
+}
+#mf .ret{
+	margin-left: 35%;
+}
+
+#insurance{
+	background-color: white;
+	background-size: contain;
+	position: relative;
+	height: 550px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 0px;
+	display: inline-block;
+	margin-bottom: auto;
+	
+}
+#insurance .jumbotron{
+	background-color: transparent;
+}
+#insurance  h2{
+	color: #8f1207;
+}
+/* #insurance .ins-img img{
+	margin-left: 70px;
+} */
+.ins-mat{
+	text-align: justify;
+	font-size:20px;
+}
+
+
+#client-testimonial{
+	background-color:#88c6fc;
+	display:left;
+}
+
+
+
+#contact{
+	position: relative;
+}
+#contact .jumbotron{
+	background-color: white;
+	
+	background-size: contain;
+	position: relative;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
+		
+}
+
+
+.bse{
+	margin-top: 90px;
+	border: 2px solid red;
+	width: 40%;
+	background-color: transparent;
+	text-align: center;
+}
+
+.arrow{
+	color: tomato;
+	size: 5px;
+}
+
+#navigation{
+	margin-bottom: 80px;
+}
+
+#button{
+	margin: 25px;
+	padding: 25px;
+	color: darkgray;
+}
+
+
+.links li{
+	display: inline;
+	margin: 25px;
+	text-align: center;
+}
+
+.loginform {
+	width: 30%;
+	margin: 20px auto;
+}
+
+.form-header{
+	text-align: center;
+}
+
+
