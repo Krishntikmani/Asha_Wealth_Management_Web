@@ -35,6 +35,10 @@ request('https://appfeeds.moneycontrol.com/jsonapi/market/marketmap&format=&type
 	
 });
 
+app.get('/downloads',function(req,res){
+	res.render('downloads');
+});
+
 app.get('/about-us',function(req,res){
 	res.render('about');
 });
